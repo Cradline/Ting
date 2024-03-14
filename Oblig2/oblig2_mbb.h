@@ -1,12 +1,10 @@
 #ifndef OBLIG2_MBB_H
 #define OBLIG2_MBB_H
-#include <cmath>
 #include <string>
 
 
 class BaseShape2D {
 public:
-    BaseShape2D() = default;
     virtual double area() = 0; // alle barneklasser skal ha utregning av areal
     virtual void operator*(double rhs) = 0; // ved bruk av operasjon "*" skal vi ha en skaleringsfunksjon
     virtual double circumference() = 0; // alle barneklasser skal ha funksjon for omkrets
@@ -14,7 +12,7 @@ public:
     enum class Color {              // enum class for farger
         PINK, YELLOW, BLUE, GREEN
     };
-    BaseShape2D(Color color) : color(color) {} // constructor
+    BaseShape2D(Color color) : color(color) {}
 
 protected:
     Color color;
@@ -57,15 +55,14 @@ private:
 
 class triangle : public BaseShape2D { // barneklasse til BaseShape2D
 public:
-    triangle(double katet1, double katet2, Color color);
+    triangle(double katet1, double katet2, BaseShape2D::Color color);
     double area() override;
     double circumference() override;
     void operator*(double rhs) override;
     void print();
 
 private:
-    double k1 = 0, k2 = 0;
-    double h = std::sqrt(k1*k1 + k2*k2); // utregning for hypotenus
+    double k1 = 0, k2 = 0, h = 0;
 
 };
 

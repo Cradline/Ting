@@ -1,5 +1,7 @@
 #include "oblig2_mbb.h"
 #include <iostream>
+#include <cmath>
+
 
 
 square::square(double lengde, BaseShape2D::Color color) : BaseShape2D(color), lengde(lengde) {}
@@ -63,7 +65,10 @@ void circle::print() { // print funksjon til circle
 }
 
 triangle::triangle(double katet1, double katet2, BaseShape2D::Color color) :
-    BaseShape2D(color), k1(katet1), k2(katet2){}
+    BaseShape2D(color), k1(katet1), k2(katet2){
+
+    double h = std::sqrt(k1*k1 + k2*k2); // utregning for hypotenus
+}
 
 double triangle::area() { // funksjon for utregning av areal til trekant
     return 0.5*k1*k2;
