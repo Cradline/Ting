@@ -3,6 +3,7 @@
 #include <string>
 
 
+
 class BaseShape2D {
 public:
     virtual double area() = 0; // alle barneklasser skal ha utregning av areal
@@ -60,9 +61,10 @@ public:
     double circumference() override;
     void operator*(double rhs) override;
     void print();
+    double h;
 
 private:
-    double k1 = 0, k2 = 0, h = 0;
+    double k1 = 0, k2 = 0;
 
 };
 
