@@ -1,0 +1,16 @@
+# ninja log v5
+6	513	7273663804651072	CMakeFiles/new_shit.dir/nitten.cpp.obj	63387e7c2538d2db
+538	691	7277156572413917	new_shit.exe	73a6b385eaa113d
+25	143	7273716500627144	CMakeFiles/new_shit.dir/temp_task.cpp.obj	4c83f6c4596a6d47
+6	627	7277154938648507	CMakeFiles/new_shit.dir/main.cpp.obj	1713a04529cdf16a
+6	535	7277156570981828	CMakeFiles/new_shit.dir/person.cpp.obj	49b5e0b642477a44
+39	1149	7291855978659021	CMakeFiles/new_shit.dir/ny_temp.cpp.obj	f5c0998db47b87c7
+73	1152	7291855978714159	CMakeFiles/new_shit.dir/ansatt.cpp.obj	61ac42225c1e6021
+7	1154	7291855978754675	CMakeFiles/new_shit.dir/main.cpp.obj	1713a04529cdf16a
+7	569	7291857040950351	CMakeFiles/new_shit.dir/main.cpp.obj	1713a04529cdf16a
+42	687	7291857042117616	CMakeFiles/new_shit.dir/person.cpp.obj	49b5e0b642477a44
+12	361	7291862308782307	CMakeFiles/new_shit.dir/main.cpp.obj	1713a04529cdf16a
+28	826	7291918468095183	CMakeFiles/new_shit.dir/person.cpp.obj	49b5e0b642477a44
+6	654	7291925386861214	CMakeFiles/new_shit.dir/main.cpp.obj	1713a04529cdf16a
+20	887	7291925387691259	CMakeFiles/new_shit.dir/student.cpp.obj	f983a208fa4ddb39
+14	889	7291925387997698	CMakeFiles/new_shit.dir/person.cpp.obj	49b5e0b642477a44
