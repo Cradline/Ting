@@ -10,7 +10,7 @@ int main()
     mySquare * 2;                               // skalerer kvadraten med en faktor på 2
 
     // TRIANGLE //
-    triangle myTriangle(5, 2, triangle::Color::GREEN); // lager en grønn trekant med katet 5 og 2
+    triangle myTriangle(5, 4, triangle::Color::GREEN); // lager en grønn trekant med katet 5 og 2
     myTriangle.print();                         // printer ut info om trekanten
     myTriangle * 3;                             // skalerer verdier i trekant med faktor på 3
 

@@ -6,11 +6,11 @@
 
 class BaseShape2D {
 public:
-    virtual double area() = 0; // alle barneklasser skal ha utregning av areal
+    virtual double area() = 0;              // alle barneklasser skal ha utregning av areal
+    virtual double circumference() = 0;     // alle barneklasser skal ha funksjon for omkrets
     virtual void operator*(double rhs) = 0; // ved bruk av operasjon "*" skal vi ha en skaleringsfunksjon
-    virtual double circumference() = 0; // alle barneklasser skal ha funksjon for omkrets
 
-    enum class Color {              // enum class for farger
+    enum class Color {                      // enum class for farger
         PINK, YELLOW, BLUE, GREEN
     };
     BaseShape2D(Color color) : color(color) {}
@@ -61,7 +61,7 @@ public:
     double circumference() override;
     void operator*(double rhs) override;
     void print();
-    double h;
+    double h; // hypotenus
 
 private:
     double k1 = 0, k2 = 0;

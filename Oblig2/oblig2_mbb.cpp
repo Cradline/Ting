@@ -36,7 +36,7 @@ void square::print() { // print funksjon til square
 
 circle::circle(double radius, BaseShape2D::Color color) : BaseShape2D(color), r(radius) {}
 
-double circle::area() { // funksjon for utregning av real til sirkel
+double circle::area() { // funksjon for utregning av areal til sirkel
     return r*r*3.14;
 }
 
@@ -44,7 +44,7 @@ double circle::circumference()  { // funksjon for utregning av omkrets til sirke
     return 2*r*3.14;
 }
 
-void circle::operator*(double rhs) { // skaleringsfunksjon til circle, printer info
+void circle::operator*(double rhs) { // skaleringsfunksjon til circle, printer ny info
     std::cout << "------------------------------\n"
                  "Skaleringsoperasjon med faktor: " << rhs <<
                  "\n------------------------------\n" << std::endl;
@@ -78,7 +78,7 @@ double triangle::circumference() { // funksjon for utregning av areal til trekan
     return h+k1+k2;
 }
 
-void triangle::operator*(double rhs) {// skalerer verdiene i triangle
+void triangle::operator*(double rhs) {// skalerer verdiene i triangle, og printer ny info
     std::cout << "------------------------------\n"
                  "Skaleringsoperasjon med faktor: " << rhs <<
                  "\n------------------------------\n" << std::endl;
