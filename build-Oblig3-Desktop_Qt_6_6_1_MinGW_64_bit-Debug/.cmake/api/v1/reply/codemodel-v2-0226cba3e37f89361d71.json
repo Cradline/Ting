@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-d55cd2065108aff82f6d.json",
+					"jsonFile" : "directory-.-Debug-5e1ffeeb7cf7503752d6.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Oblig3::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Oblig3-Debug-2cdd3d873a58d565aa99.json",
+					"jsonFile" : "target-Oblig3-Debug-68d0c9bf8498d060b12c.json",
 					"name" : "Oblig3",
 					"projectIndex" : 0
 				}

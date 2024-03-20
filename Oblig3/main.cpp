@@ -1,9 +1,8 @@
-#include <iostream>
-
-using namespace std;
+#include "oblig3_mbb.h"
 
 int main()
 {
-    cout << "Hello World! Hey hey  " << endl;
+    ReadInput("myHouseIN.txt");
+    WriteFile("myHouseOUT.txt");
     return 0;
 }

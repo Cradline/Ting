@@ -1,0 +1,8 @@
+Name: A
+Total areal: 50
+Antall rom: 3
+Renholdere som trengs: 4
+Rom: 
+Lengde: 5, Bredde: 4
+Lengde: 2, Bredde: 9
+Lengde: 6, Bredde: 2

@@ -1,0 +1,9 @@
+Name: B
+Total areal: 46
+Antall rom: 4
+Renholdere som trengs: 4
+Rom: 
+Lengde: 2, Bredde: 5
+Lengde: 5, Bredde: 2
+Lengde: 8, Bredde: 3
+Lengde: 1, Bredde: 2
