@@ -8,7 +8,7 @@
 #include "oblig3_mbb.h"
 
 
-std::map<std::string, Building> HouseMap;
+std::map<std::string, Building> HouseMap; // map bestående av alle bygninger
 
 Room::Room(std::pair<int, int> roomDims, std::string name) : lengde(roomDims.first), bredde(roomDims.second), name(name) {}
 
@@ -28,7 +28,7 @@ std::string Room::getName() const {
     return name;
 }
 
-Building::Building(std::string name) : name(name), totArea(0) {}
+Building::Building(std::string name) : name(name), totArea(0) {} // gjør at total Areal til en bygning er 0 når ny bygning opprettes
 
 void Building::addRoom(Room room) {
     rooms.push_back(room);
@@ -58,7 +58,7 @@ int Building::calcCleaners() const {
 }
 
 void ReadInput(std::string file_path) {
-    std::ifstream inputFile(file_path); // åpner inputfila med info om rommene i forskjellige bygninger
+    std::ifstream inputFile(file_path); // åpner inputfilen med info om rommene i forskjellige bygninger
 
     if(inputFile.fail()){
         std::cout << "Error, unable to read input file." << std::endl;
@@ -68,20 +68,20 @@ void ReadInput(std::string file_path) {
     int x, y;
     std::string z;
 
-    while(inputFile >> x >> y >> z){
+    while(inputFile >> x >> y >> z){ // inputfil har en x, y og z verdi
 
         std::pair<int, int> roomDims = std::make_pair(x, y);
         Room room(roomDims, z);
 
-        if(HouseMap.find(z) == HouseMap.end()) { // sjekker om bygning allerede eksisterer
-            Building building(z);
-            building.addRoom(room);
-            building.calcCleaners();
-            HouseMap.emplace(z, building);
+        if(HouseMap.find(z) == HouseMap.end()) {                    // sjekker om bygning allerede eksisterer i HouseMap
+            Building building(z);                                   // eksisterer ikke fra før --> lager ny bygning med navn z
+            building.addRoom(room);                                 // adder rommet til bygningen
+            building.calcCleaners();                                // regner ut hvor mange renholdere dette bygget trenger
+            HouseMap.emplace(z, building);                          // plasserer bygningen i HouseMap
 
-        } else {
-            Building& existingBuilding = HouseMap.find(z)->second; // Henter referansen til den eksisterende bygningen i HouseMap
-            existingBuilding.addRoom(room);         // Legger til rommet i den eksisterende bygningen
+        } else {                                                    // vi har en allerede eksisterende bygning
+            Building& existingBuilding = HouseMap.find(z)->second;  // Henter referansen til den eksisterende bygningen i HouseMap
+            existingBuilding.addRoom(room);                         // Legger til rommet i den eksisterende bygningen
         }
 
     }
@@ -103,10 +103,12 @@ void WriteFile(std::string file_path) {
         outFile << "Total areal: " << building.area() << std::endl;     // printer info om bygning
         outFile << "Antall rom: " << building.getRooms().size() << std::endl;
         outFile << "Renholdere som trengs: " << building.calcCleaners() << std::endl;
-
+        outFile << std::endl;                                           // blank linje for litt mellomrom
         outFile << "Rom: " << std::endl;                                // printer info om alle rommene i aktuell bygning
+        int j = 0;
         for (const Room& room : building.getRooms()) {
-            outFile << "Lengde: " << room.getLengde() << ", Bredde: " << room.getBredde() << std::endl;
+            j++;
+            outFile << j << ". " << "Lengde: " << room.getLengde() << ", Bredde: " << room.getBredde() << std::endl;
         }
         outFile.close(); // lukker filen
     }

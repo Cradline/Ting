@@ -2,8 +2,9 @@ Name: C
 Total areal: 71
 Antall rom: 4
 Renholdere som trengs: 5
+
 Rom: 
-Lengde: 8, Bredde: 2
-Lengde: 7, Bredde: 3
-Lengde: 2, Bredde: 3
-Lengde: 7, Bredde: 4
+1. Lengde: 8, Bredde: 2
+2. Lengde: 7, Bredde: 3
+3. Lengde: 2, Bredde: 3
+4. Lengde: 7, Bredde: 4
