@@ -25,7 +25,7 @@ public:
     Building(std::string name);
     double area() const;
     void addRoom(Room room);
-    const std::vector<Room>& getRooms() const; // skal ikke endre på noen av medlemsvariablene, kun hente info om rom
+    const std::vector<Room>& getRooms() const; // skal ikke endre på noen av medlemsvariablene, kun hente info
     int calcCleaners() const;
     std::string getName() const;
 

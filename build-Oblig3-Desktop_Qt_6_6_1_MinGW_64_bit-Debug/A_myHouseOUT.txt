@@ -1,9 +1,9 @@
 Name: A
-Total areal: 50
+Total areal: 7
 Antall rom: 3
-Renholdere som trengs: 4
+Renholdere som trengs: 2
 
 Rom: 
-1. Lengde: 5, Bredde: 4
-2. Lengde: 2, Bredde: 9
-3. Lengde: 6, Bredde: 2
+1. Lengde: 1, Bredde: 2
+2. Lengde: 2, Bredde: 1
+3. Lengde: 3, Bredde: 1

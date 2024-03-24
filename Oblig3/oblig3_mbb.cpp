@@ -31,17 +31,17 @@ std::string Room::getName() const {
 Building::Building(std::string name) : name(name), totArea(0) {} // gjør at total Areal til en bygning er 0 når ny bygning opprettes
 
 void Building::addRoom(Room room) {
-    rooms.push_back(room);
-    totArea += room.area();
+    rooms.push_back(room);          // adder rom til en gitt bygning, i rooms vektor
+    totArea += room.area();         // oppdaterer totalt areal i bygning ved addering av rom
 }
 
-const std::vector<Room>& Building::getRooms() const {
+const std::vector<Room>& Building::getRooms() const { // henter info om rom i en gitt bygning
     return rooms;
 }
 
 double Building::area() const {
     double totArea = 0;
-    for(const auto& room : rooms) {
+    for(const auto& room : rooms) { // regner ut areal for alle rom i en gitt bygning
         totArea += room.area();
     }
     return totArea;
@@ -52,8 +52,8 @@ std::string Building::getName() const {
 }
 
 int Building::calcCleaners() const {
-    int CleanersByArea = ceil(Building::area() / 15); // ceil runder opp til nærmeste heltall,
-    int CleanersByRooms = ceil(rooms.size() / 2);
+    int CleanersByArea = ceil(Building::area() / 15);                   // ceil runder opp til nærmeste heltall,
+    int CleanersByRooms = ceil(static_cast<double>(rooms.size()) / 2);  // gjør om til double for å være sikker på at det blir rundet opp
     return std::max(CleanersByArea, CleanersByRooms);
 }
 
@@ -68,10 +68,10 @@ void ReadInput(std::string file_path) {
     int x, y;
     std::string z;
 
-    while(inputFile >> x >> y >> z){ // inputfil har en x, y og z verdi
+    while(inputFile >> x >> y >> z){                                // inputfil har en x, y og z verdi på hver linje
 
-        std::pair<int, int> roomDims = std::make_pair(x, y);
-        Room room(roomDims, z);
+        std::pair<int, int> roomDims = std::make_pair(x, y);        // lager et par av x og y hentet fra input
+        Room room(roomDims, z);                                     // lager et rom av dimensjoner x og y, som er i bygning z
 
         if(HouseMap.find(z) == HouseMap.end()) {                    // sjekker om bygning allerede eksisterer i HouseMap
             Building building(z);                                   // eksisterer ikke fra før --> lager ny bygning med navn z
@@ -85,7 +85,7 @@ void ReadInput(std::string file_path) {
         }
 
     }
-    inputFile.close(); // lukker inputfilen
+    inputFile.close(); // lukker input-filen
 
 }
 
@@ -110,7 +110,7 @@ void WriteFile(std::string file_path) {
             j++;
             outFile << j << ". " << "Lengde: " << room.getLengde() << ", Bredde: " << room.getBredde() << std::endl;
         }
-        outFile.close(); // lukker filen
+        outFile.close(); // lukker output-filen
     }
 }
 
