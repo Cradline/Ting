@@ -1,10 +1,10 @@
 Name: B
-Total areal: 46
-Antall rom: 4
-Renholdere som trengs: 4
+Total area: 46
+Amount of rooms: 4
+Needed cleaning staff: 4
 
-Rom: 
-1. Lengde: 2, Bredde: 5
-2. Lengde: 5, Bredde: 2
-3. Lengde: 8, Bredde: 3
-4. Lengde: 1, Bredde: 2
+Rooms: 
+1. L: 2, W: 5
+2. L: 5, W: 2
+3. L: 8, W: 3
+4. L: 1, W: 2

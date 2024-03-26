@@ -1,10 +1,11 @@
 Name: C
-Total areal: 71
-Antall rom: 4
-Renholdere som trengs: 5
+Total area: 76
+Amount of rooms: 5
+Needed cleaning staff: 6
 
-Rom: 
-1. Lengde: 8, Bredde: 2
-2. Lengde: 7, Bredde: 3
-3. Lengde: 2, Bredde: 3
-4. Lengde: 7, Bredde: 4
+Rooms: 
+1. L: 8, W: 2
+2. L: 7, W: 3
+3. L: 3, W: 3
+4. L: 7, W: 4
+5. L: 1, W: 2

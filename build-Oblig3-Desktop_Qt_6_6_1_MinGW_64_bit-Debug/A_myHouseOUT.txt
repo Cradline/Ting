@@ -1,9 +1,9 @@
 Name: A
-Total areal: 7
-Antall rom: 3
-Renholdere som trengs: 2
+Total area: 7
+Amount of rooms: 3
+Needed cleaning staff: 2
 
-Rom: 
-1. Lengde: 1, Bredde: 2
-2. Lengde: 2, Bredde: 1
-3. Lengde: 3, Bredde: 1
+Rooms: 
+1. L: 1, W: 2
+2. L: 2, W: 1
+3. L: 3, W: 1

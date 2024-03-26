@@ -52,8 +52,8 @@ std::string Building::getName() const {
 }
 
 int Building::calcCleaners() const {
-    int CleanersByArea = ceil(Building::area() / 15);                   // ceil runder opp til nærmeste heltall,
-    int CleanersByRooms = ceil(static_cast<double>(rooms.size()) / 2);  // gjør om til double for å være sikker på at det blir rundet opp
+    int CleanersByArea = ceil(static_cast<double>(Building::area()) / 15);      // ceil runder opp til nærmeste heltall,
+    int CleanersByRooms = ceil(static_cast<double>(rooms.size()) / 2);          // gjør om til double for at det skal være mulig å runde opp
     return std::max(CleanersByArea, CleanersByRooms);
 }
 
@@ -89,7 +89,7 @@ void ReadInput(std::string file_path) {
 
 }
 
-void WriteFile(std::string file_path) {
+void WriteFile(std::string file_path) { // utskriftfunksjon
 
 
     for (const auto& pair : HouseMap) { // variabel pair er referanse til hvert element i HouseMap
@@ -100,15 +100,15 @@ void WriteFile(std::string file_path) {
                                                                         // henter navnet på bygningen og dette blir første del av filnavnet
 
         outFile << "Name: " << building.getName() << std::endl;         // Skriver første linje i filen, henter navnet på aktuell bygning
-        outFile << "Total areal: " << building.area() << std::endl;     // printer info om bygning
-        outFile << "Antall rom: " << building.getRooms().size() << std::endl;
-        outFile << "Renholdere som trengs: " << building.calcCleaners() << std::endl;
+        outFile << "Total area: " << building.area() << std::endl;     // printer info om bygning
+        outFile << "Amount of rooms: " << building.getRooms().size() << std::endl;
+        outFile << "Needed cleaning staff: " << building.calcCleaners() << std::endl;
         outFile << std::endl;                                           // blank linje for litt mellomrom
-        outFile << "Rom: " << std::endl;                                // printer info om alle rommene i aktuell bygning
-        int j = 0;
+        outFile << "Rooms: " << std::endl;                                // printer info om alle rommene i aktuell bygning
+        int j = 0; // for nummerering av rom i en gitt bygning
         for (const Room& room : building.getRooms()) {
-            j++;
-            outFile << j << ". " << "Lengde: " << room.getLengde() << ", Bredde: " << room.getBredde() << std::endl;
+            j++; // printer en linje pr rom, nummererer hvert rom og printer ut bredde og lengde
+            outFile << j << ". " << "L: " << room.getLengde() << ", W: " << room.getBredde() << std::endl;
         }
         outFile.close(); // lukker output-filen
     }
